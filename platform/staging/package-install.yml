@@ -4,6 +4,8 @@ kind: PackageInstall
 metadata:
   name: engineering-platform
   namespace: kadras-packages
+  annotations:
+    kapp.k14s.io/change-rule.package-repo: upsert after upserting package-repo
 spec:
   packageRef:
     refName: engineering-platform.packages.kadras.io

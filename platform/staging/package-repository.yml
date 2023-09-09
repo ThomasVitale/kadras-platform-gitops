@@ -4,6 +4,8 @@ kind: PackageRepository
 metadata:
   name: kadras-packages
   namespace: kadras-packages
+  annotations:
+    kapp.k14s.io/change-group: package-repo
 spec:
   fetch:
     imgpkgBundle:
