@@ -1,0 +1,10 @@
+---
+apiVersion: packaging.carvel.dev/v1alpha1
+kind: PackageRepository
+metadata:
+  name: kadras-packages
+  namespace: kadras-installer
+spec:
+  fetch:
+    imgpkgBundle:
+      image: ghcr.io/kadras-io/kadras-packages:0.13.0-RC1

@@ -1,0 +1,19 @@
+---
+apiVersion: kappctrl.k14s.io/v1alpha1
+kind: App
+metadata:
+  name: kadras-sync
+  namespace: kadras-system
+spec:
+  serviceAccountName: kadras-installer
+  syncPeriod: 5m0s
+  fetch:
+  - git:
+      url: https://github.com/thomasvitale/kadras-platform-gitops
+      ref: main
+      subPath: clusters/production
+  template:
+  - ytt: {}
+  - kbld: {}
+  deploy:
+  - kapp: {}

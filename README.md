@@ -1,1 +1,1 @@
-# kadras-platform-gitops
+# Kadras Platform GitOps

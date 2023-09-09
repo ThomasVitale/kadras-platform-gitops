@@ -1,0 +1,16 @@
+---
+apiVersion: packaging.carvel.dev/v1alpha1
+kind: PackageInstall
+metadata:
+  name: engineering-platform
+  namespace: kadras-packages
+spec:
+  packageRef:
+    refName: engineering-platform.packages.kadras.io
+    versionSelection:
+      constraints: 0.11.0-RC1
+      prereleases: {}
+  serviceAccountName: kadras-installer
+  values:
+  - secretRef:
+      name: engineering-platform-values
