@@ -6,7 +6,7 @@ metadata:
   namespace: kadras-system
 spec:
   serviceAccountName: kadras-installer
-  syncPeriod: 5m0s
+  syncPeriod: 1m0s
   fetch:
   - git:
       url: https://github.com/thomasvitale/kadras-platform-gitops
